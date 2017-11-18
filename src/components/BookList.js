@@ -7,7 +7,8 @@ class BookList extends Component {
 		return this.props.bookList.map((book, index, bookList) => {
 			return <BookListItem
 								key={book.title}
-								book={book} />
+								book={book}
+								bookSelected={(book) => {console.log('bookSelected', book)}} />
 		});
 	}
 
