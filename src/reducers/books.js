@@ -1,5 +1,4 @@
 export default (state, action) => {
-	console.log('books action creator run with state', state, 'and action', action);
 	return [
 		{title: 'Harry Potter and the Philosopher\'s Stone', author: 'J.R.R. Tolkien', pages: 223, published: 1997, genre: 'Fiction'},
 		{title: 'Lord of the Rings: The Fellowship of the Ring', author: 'J.K. Rowling', pages: 423, published: 1954, genre: 'Fiction'},

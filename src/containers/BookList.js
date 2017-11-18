@@ -27,13 +27,13 @@ class BookList extends Component {
 	}
 }
 
-// this function along with the connect function below is what makes pieces of application state available as props to our component
+// this function along with the connect function makes pieces of application state available as props to our component
 function mapStateToProps(state) {
-	return {
-		bookList: state.bookList
-	};
+	return { bookList: state.bookList };
 }
 
+// this function along with the connect function makes action creators available as props to our component
+// action creators are the way application state gets updated
 function mapDispatchToProps(dispatch) {
 	return bindActionCreators({ bookSelected }, dispatch);
 }
