@@ -1,5 +1,5 @@
 import React from 'react';
 
-export default (props) => {
-	return <li className="list-group-item">{props.book.title}</li>;
+export default ({ book }) => {
+	return <li className="list-group-item" onClick={event => {console.log(book.title, 'clicked')}}>{book.title}</li>;
 }
