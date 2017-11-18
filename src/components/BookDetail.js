@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-export default class BookDetail extends Component {
+class BookDetail extends Component {
 	render() {
 		return (
 			<div>
@@ -9,3 +10,10 @@ export default class BookDetail extends Component {
 		);
 	}		
 }
+
+function mapStateToProps(state) {
+	console.log('mapStateToProps in BookDetail with state', state);
+	return { selectedBook: state.selectedBook};
+}
+
+export default connect(mapStateToProps)(BookDetail);
