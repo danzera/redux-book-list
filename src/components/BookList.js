@@ -5,7 +5,9 @@ import BookListItem from './BookListItem';
 class BookList extends Component {
 	renderBookList() {
 		return this.props.bookList.map((book, index, bookList) => {
-			return <BookListItem />
+			return <BookListItem
+								key={book.title}
+								book={book} />
 		});
 	}
 
