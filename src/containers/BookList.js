@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import BookListItem from './BookListItem';
+import BookListItem from '../components/BookListItem';
+// no need to specify filename in the case of 'index.js'
+// automatically looks for a file called 'index.js' if no filename is provided
 import { bookSelected } from '../actions/';
 
 class BookList extends Component {
