@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import BookList from '../containers/BookList';
+import BookDetail from './BookDetail';
 
 export default class App extends Component {
   render() {
     return (
-      <BookList />
+      <div>
+        <BookList />
+        <BookDetail />
+      </div>
     );
   }
 }
