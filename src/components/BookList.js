@@ -3,13 +3,19 @@ import { connect } from 'react-redux';
 import BookListItem from './BookListItem';
 
 class BookList extends Component {
+	renderBookList() {
+		return this.props.bookList.map((book, index, bookList) => {
+			return <BookListItem />
+		});
+	}
+
 	render() {
-		if (this.props.bookList) {
-			return <div>{this.props.bookList[0].title}<BookListItem /></div>;
+		if (!this.props.bookList) {
+			return <div>Loading book list...</div>;
 		}
 
 		return (
-			<div>Loading book list...</div>
+			<div>{this.renderBookList()}</div>
 		);
 	}
 }
